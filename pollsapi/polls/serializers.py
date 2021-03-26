@@ -18,6 +18,7 @@ class CommentaireSerializer(DynamicFieldsMixin, serializers.ModelSerializer):
     class Meta:
         model = models.Commentaire
         fields = '__all__'
+        depth = 1
         
 class ArticleSerializer(DynamicFieldsMixin, serializers.ModelSerializer):
     Commentaire = CommentaireSerializer(many=True, required=False)
@@ -25,6 +26,7 @@ class ArticleSerializer(DynamicFieldsMixin, serializers.ModelSerializer):
     class Meta:
         model = models.Article
         fields = '__all__'
+        depth = 1
         
         
 class CategorieSerializer(DynamicFieldsMixin, serializers.ModelSerializer):
