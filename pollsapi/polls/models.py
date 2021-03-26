@@ -39,7 +39,7 @@ class Utilisateur(models.Model):
 
     def __str__(self):
         """Unicode representation of Utilisateur."""
-        return self.user.first_name
+        return self.user.username
 
 
 class Categorie(models.Model):
