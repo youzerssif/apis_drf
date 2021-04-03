@@ -46,7 +46,10 @@ INSTALLED_APPS = [
     # Packages
     'rest_framework',
     'drf_yasg',
+    "rest_framework_api_key",
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
