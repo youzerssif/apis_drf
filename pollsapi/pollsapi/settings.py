@@ -49,7 +49,11 @@ INSTALLED_APPS = [
     "rest_framework_api_key",
 ]
 
-
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework_api_key.permissions.HasAPIKey",
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
